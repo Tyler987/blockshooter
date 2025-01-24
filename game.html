@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wave Game Example</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Pause, End, restart health -->
+  <div id="top-bar">
+    <button id="pauseBtn">Pause</button>
+    <button id="endGameBtn">End Game</button>
+    <button id="restartBtn">Restart</button>
+
+    <!-- health bar -->
+    <div id="health-bar-container">
+      <div id="health-bar">
+        <span id="health-text"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- wave overlay -->
+  <div id="waveOverlay"></div>
+
+  <!-- victory overlay -->
+  <div id="victoryOverlay">VICTORY!</div>
+
+  <!-- defeat overlay -->
+  <div id="defeatOverlay">DEFEATED</div>
+
+  <div class="container">
+    <!-- upgrades, stats, controls -->
+    <div id="upgrade-list">
+      <h2>Possible Upgrades</h2>
+      <ul>
+        <li>Speed (+1)</li>
+        <li>Strength (+5)</li>
+        <li>Health (+20 max HP)</li>
+        <li>Faster Bullets (+2 bullet speed)</li>
+        <li>Immunity Potions (once unlocked)</li>
+        <li>Multi Shot (rare 10% chance)</li>
+      </ul>
+
+      <h2>Enemy Stats</h2>
+      <ul id="enemyStats"></ul>
+
+      <h2>Controls</h2>
+      <ul>
+        <li>W/A/S/D: Move</li>
+        <li>T: Pause/Resume</li>
+        <li>Pause/End/Restart: Top Bar Buttons</li>
+      </ul>
+    </div>
+    
+    <!-- game -->
+    <div id="game-area">
+      <canvas id="gameCanvas" width="800" height="500"></canvas>
+    </div>
+    
+    <!-- current upgrades -->
+    <div id="current-upgrades">
+      <h2>Current Upgrades</h2>
+      <ul id="upgradeStats"></ul>
+    </div>
+  </div>
+  
+  <script src="js/constants.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/upgrades.js"></script>
+  <script src="js/waveManager.js"></script>
+  <script src="js/game.js"></script>
+
+</body>
+</html>
